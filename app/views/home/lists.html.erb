@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row header">
+    <h1>Complete!</h1>
+    <h3>These are what you've sent. Thank you!</h3>
+  </div>
+  <div class="row body">
+   <ul>
+     <% @msgs.each do |x| %>
+         <li> Name: <%= x.name %> </li>
+         <li> Email: <%= x.address %> </li>
+         <li> Message: <%= x.content %> </li>
+         <li> Time: <%= x.created_at.in_time_zone("Asia/Seoul").strftime("%Y.%m.%d (%H:%M)") %> </li>
+         <h5> <a href='/update_view/<%= x.id %>'>Update</a> <a href='/destroy/<%= x.id %>'>Delete</a> </h5>
+         <form><ul><li><div class="divider"></div></li></ul></form>
+     <% end %>
+   </ul>
+   <a href="/" class="btn">BACK</a>
+  </div>
+</div>

@@ -1,0 +1,1 @@
+Ruby on Rails로 만든 간단한 CRUD기능을 가진 게시판입니다. 
